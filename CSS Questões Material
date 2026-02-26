@@ -1,0 +1,98 @@
+a) Qual a diferença entre selecionar por tag, por classe e por id?
+
+Por tag: seleciona todos os elementos HTML daquele tipo.
+  Exemplo:
+
+ 
+  p {
+    color: blue;
+  }
+ 
+
+  Aplica o estilo a todos os <p> da página.
+
+Por classe (.classe): seleciona todos os elementos que possuem aquela classe.
+  Exemplo:
+
+  
+  .destaque {
+    color: red;
+  }
+  
+
+  Pode ser usada em vários elementos diferentes.
+
+Por id (#id): seleciona um único elemento específico que tenha aquele id.
+  Exemplo:
+
+  #cabecalho {
+    background: gray;
+  }
+  
+
+  Deve ser único na página.
+
+
+b) Quando é mais adequado usar classe em vez de id?
+
+É mais adequado usar classe quando:
+
+* O mesmo estilo será aplicado a vários elementos.
+* O estilo pode ser reutilizado em diferentes partes da página.
+* Estamos criando estilos mais genéricos e reutilizáveis.
+
+Use id apenas quando o elemento for único na página, como:
+
+* Cabeçalho principal
+* Rodapé
+* Seções exclusivas
+
+Em geral, no CSS moderno, classes são mais utilizadas que ids, porque tornam o código mais flexível e reutilizável.
+
+
+c) O que acontece se dois elementos tiverem o mesmo id?
+
+Isso é inválido no HTML, pois o id deve ser único.
+O CSS pode até aplicar o estilo aos dois elementos, mas:
+
+  Pode causar problemas em JavaScript
+  Pode gerar comportamento inesperado
+  Prejudica a organização e a acessibilidade da página
+
+
+a1) Margin
+
+Margin (margem) é o espaço externo de um elemento, ou seja, a distância entre ele e outros elementos ao redor.
+
+Ela fica fora da borda.
+
+Exemplo:
+
+div {
+  margin: 20px;
+}
+
+Isso cria um espaço de 20px ao redor do elemento, separando-o dos outros.
+
+Espaço fora do elemento
+Separa elementos entre si
+Não altera o tamanho interno do conteúdo
+
+
+b1) Padding
+
+Padding (preenchimento) é o espaço interno de um elemento, ou seja, a distância entre o conteúdo e a borda.
+
+Ele fica dentro da borda.
+
+Exemplo:
+
+div {
+  padding: 20px;
+}
+
+Isso cria um espaço de 20px entre o texto (ou conteúdo) e a borda do elemento.
+
+Espaço dentro do elemento
+Afasta o conteúdo da borda
+Aumenta o tamanho total visível do elemento

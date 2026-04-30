@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de CORS - TBL</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .success { color: green; font-weight: bold; }
+        .error { color: red; font-weight: bold; }
+        pre { background: #eee; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Exercício CORS</h1>
+    <p>Status da Requisição: <span id="status">Aguardando...</span></p>
+    
+    <h3>Dados Recebidos:</h3>
+    <pre id="resultado">Nenhum dado carregado.</pre>
+
+    <script>
+        const statusEl = document.getElementById('status');
+        const resultadoEl = document.getElementById('resultado');
+
+        //EXERCÍCIO 4:
+        fetch('http://localhost:3000/usuarios')
+            .then(response => {
+                if (!response.ok) throw new Error('Erro na rede');
+                return response.json();
+            })
+            .then(data => {
+                statusEl.innerText = "Sucesso!";
+                statusEl.className = "success";
+                resultadoEl.innerText = JSON.stringify(data, null, 2);
+                console.table(data);
+            })
+            .catch(error => {
+                statusEl.innerText = "Bloqueado pelo CORS ou erro de conexão.";
+                statusEl.className = "error";
+                console.error('Erro detalhado:', error);
+            });
+    </script>
+</body>
+</html>

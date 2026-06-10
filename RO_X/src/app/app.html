@@ -1,0 +1,14 @@
+<app-header></app-header> 
+
+<div style="padding: 20px;">
+  <input type="text" [(ngModel)]="busca" placeholder="Buscar produto...">
+  <button (click)="toggleProdutos()">Mostrar/Esconder Produtos</button>
+
+  <div *ngIf="mostrarProdutos" style="display: flex; gap: 10px; margin-top: 20px;">
+    <app-product-card 
+      *ngFor="let produto of produtos" 
+      [nome]="produto.nome" 
+      [preco]="produto.preco">
+    </app-product-card>
+  </div>
+</div>

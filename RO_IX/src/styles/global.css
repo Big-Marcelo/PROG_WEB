@@ -1,0 +1,61 @@
+/* src/styles/global.css */
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f4f4f4; /* Fundo geral obrigatório [cite: 641-645, 793] */
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .produtos-lista {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Mantém os cards alinhados [cite: 794] */
+  }
+  
+  /* Estilização base para os exercícios 1, 3 e 5 [cite: 696-701, 743-746] */
+  .card {
+    background-color: white; /* [cite: 697] */
+    padding: 20px; /* [cite: 700] */
+    margin: 20px; /* [cite: 701] */
+    border-radius: 10px; /* Borda arredondada [cite: 699, 746] */
+    width: 300px; /* Largura fixa [cite: 739] */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra [cite: 736, 744] */
+    transition: transform 0.3s ease; /* Transição suave [cite: 745] */
+  }
+  
+  /* Efeito Hover do Ex 1 e 3: Aumentar e subir levemente o card [cite: 703, 704, 748, 749] */
+  .card:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+  
+  /* Botão estilizado [cite: 738, 796] */
+  .card button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  /* Efeito extra do Ex 5: Botão mudar de cor [cite: 806] */
+  .card button:hover {
+    background-color: #555;
+  }
+  
+  /* Desafios extras do Ex 5: Imagem fake e preço promocional [cite: 804, 805] */
+  .fake-img {
+    height: 150px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .preco-promo {
+    color: red;
+    font-size: 0.9em;
+    text-decoration: line-through;
+  }
